@@ -12,7 +12,11 @@ import java.util.logging.Logger;
  */
 public class Main {
 
-    public static void main() {
+    /**
+     *
+     * @param args
+     */
+    public static void main(String[] args) {
         // TODO code application logic here        
         Date harryPotterDate = null;
         try {

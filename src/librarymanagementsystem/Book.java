@@ -7,11 +7,7 @@ import java.util.Date;
  * @author Khalid Tarek
  */
 public class Book {
-    /**
-     * A static variable representing the numbers of copies available of this book
-     */
-    private static int NumberOfCopiesAvailable = 0;
-    
+   
     private final long id;
     private final int copyNumber;
     private final String bookName;
@@ -21,21 +17,13 @@ public class Book {
     /**
      * A basic constructor 
      */
-    private Book(int NumberOfCopiesAvailable, long id, int copyNumber, 
-            String bookName, String authorName, Date publicationDate){
-        Book.NumberOfCopiesAvailable = NumberOfCopiesAvailable;
+    public Book(long id, int copyNumber, String bookName, 
+            String authorName, Date publicationDate){
         this.id = id;
         this.copyNumber = copyNumber;
         this.bookName = bookName;
         this.authorName = authorName;
         this.publicationDate = publicationDate;
-    }
-    
-    /**
-     * @return the NumberOfCopiesAvailable
-     */
-    public static int getNumberOfCopiesAvailable() {
-        return NumberOfCopiesAvailable;
     }
 
     /**
@@ -72,20 +60,17 @@ public class Book {
     public Date getPublicationDate() {
         return publicationDate;
     }
-
-    /**
-     * @return the priceRate
-     */
-    public int getPriceRate() {
-        return priceRate;
-    }
-
-    /**
-     * @param aNumberOfCopiesAvailable the NumberOfCopiesAvailable to set
-     */
-    public static void setNumberOfCopiesAvailable(int aNumberOfCopiesAvailable) {
-        NumberOfCopiesAvailable = aNumberOfCopiesAvailable;
-    }
     
+    @Override
+    public String toString(){
+        StringBuilder bookString = new StringBuilder("");
+        
+        bookString.append("Unique ID: ").append(id).append(copyNumber).append("\n");
+        bookString.append(bookName).append("\n");
+        bookString.append("by: ").append(authorName).append("\n");
+        bookString.append(publicationDate.toString());
+        
+        return bookString.toString();
+    }
     
 }
