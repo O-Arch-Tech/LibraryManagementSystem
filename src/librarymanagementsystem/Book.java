@@ -74,10 +74,17 @@ public class Book {
     }
 
     /**
-     * @param NumberOfCopiesAvailable the NumberOfCopiesAvailable to set
+     * @return the priceRate
      */
-    public static void setNumberOfCopiesAvailable(int NumberOfCopiesAvailable) {
-        Book.NumberOfCopiesAvailable = NumberOfCopiesAvailable;
+    public int getPriceRate() {
+        return priceRate;
+    }
+
+    /**
+     * @param aNumberOfCopiesAvailable the NumberOfCopiesAvailable to set
+     */
+    public static void setNumberOfCopiesAvailable(int aNumberOfCopiesAvailable) {
+        NumberOfCopiesAvailable = aNumberOfCopiesAvailable;
     }
     
     
